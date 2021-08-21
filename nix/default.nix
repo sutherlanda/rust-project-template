@@ -5,15 +5,15 @@ let
   myLibs = import (systemPkgs.fetchFromGitHub {
     owner = "sutherlanda";
     repo = "nix-project";
-    rev = "25fc890cd5615045bd712547fa448ba23e599692";
-    sha256 = "1x6mav09l2xjf0p5rqgr3r7g4mbis47bxf9wfr5yxgfjk5i29k7m";
+    rev = "9f9f2cbfa5364f3e44590e9e676c9f84689d16ce";
+    sha256 = "0paf606cylssc068yf7i3dqw1g3iflzvz6wb98lj3mapk5x1wvq8";
   });
   # myLibs = import ../../nix-project/default.nix;
   pkgs = myLibs.config.pkgSet;
 in
   rec {
     shell = myLibs.lib.mkShell {
-      buildInputs = with pkgs; [ libiconv cargo rustc ];
+      buildInputs = with pkgs; [ libiconv cargo rustc rust-analyzer rustfmt ]; 
       shellHook = ''
       '';
     };

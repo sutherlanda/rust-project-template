@@ -1,0 +1,7 @@
+*.swp
+*.tmp
+*.tmp.*
+*.DS_Store
+tmp/
+result
+target
