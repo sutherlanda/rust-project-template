@@ -5,8 +5,8 @@ let
   myLibs = import (systemPkgs.fetchFromGitHub {
     owner = "sutherlanda";
     repo = "nix-project";
-    rev = "9f9f2cbfa5364f3e44590e9e676c9f84689d16ce";
-    sha256 = "0paf606cylssc068yf7i3dqw1g3iflzvz6wb98lj3mapk5x1wvq8";
+    rev = "c8c1e5642d5da8ce2165f9a142ce9dcf8d20e06b";
+    sha256 = "10c759m65wj3hwj03nfcs8rz0q6mvb3n8bvsk7b1yhipy5002m20";
   });
   # myLibs = import ../../nix-project/default.nix;
   pkgs = myLibs.config.pkgSet;
